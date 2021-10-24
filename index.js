@@ -39,6 +39,13 @@ const recoverSecret = (triplets) => {
 const locationSearch = (triplets, arr,i) => {
       // Check if there are 2 characters in the array
       const result = triplets.filter(word => (word == arr[0] && word == arr[1]) || (word == arr[0] && word == arr[2]) || (word == arr[1] && word == arr[2]));
+      if (result.length == 0) { // Check if there are 1 characters in the array            
+            const res = triplets.filter(word => (word[0] == i || word[1] == i || word[2] == i));
+            const rest = res.filter(word => word == arr);
+            var num = rest[0].indexOf(i)
+            return (rest[0][num-1])
+      }
+
 }
 
 
