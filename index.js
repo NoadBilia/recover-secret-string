@@ -2,7 +2,7 @@
 // Noad Bilia
 
 const recoverSecret = (triplets) => {
-      script = [];
+      let script = [];
       for (let i in triplets) {
             let x = triplets[i][0];
             let y = triplets[i][1];
@@ -62,8 +62,8 @@ const locationSearch = (triplets, arr,i) => {
 }
 
 
-secret1 = "whatisup";
-triplets = [['t', 'u', 'p'],['w', 'h', 'i'],['t', 's', 'u'],['a', 't', 's'],['h', 'a', 'p'],['t', 'i', 's'],['w', 'h', 's']];
+let secret1 = "whatisup";
+let triplets = [['t', 'u', 'p'],['w', 'h', 'i'],['t', 's', 'u'],['a', 't', 's'],['h', 'a', 'p'],['t', 'i', 's'],['w', 'h', 's']];
 
 recoverSecret(triplets);
 

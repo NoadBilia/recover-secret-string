@@ -1,4 +1,4 @@
-import {recoverSecret} from './recover-secret-string/index.js';
+import {recoverSecret} from './index.js';
 
 
 test('testing recover Secret', () => {
