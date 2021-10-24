@@ -1,6 +1,7 @@
-import { } from './recover-secret-string/index.js';
+import {recoverSecret} from './recover-secret-string/index.js';
 
 
-/* test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-}); */
+test('testing recover Secret', () => {
+  let input = [['t', 'u', 'p'],['w', 'h', 'i'],['t', 's', 'u'],['a', 't', 's'],['h', 'a', 'p'],['t', 'i', 's'],['w', 'h', 's']];
+  expect(recoverSecret(input)).toBe('whatisup');
+});

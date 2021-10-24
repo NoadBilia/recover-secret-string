@@ -3,6 +3,11 @@
 
 function recoverSecret(triplets) {
       script = [];
+      for (let i in triplets) {
+            let x = triplets[i][0];
+            let y = triplets[i][1];
+            let z = triplets[i][2];
+      }
 }
 
 
@@ -11,4 +16,4 @@ triplets = [['t', 'u', 'p'],['w', 'h', 'i'],['t', 's', 'u'],['a', 't', 's'],['h'
 
 recoverSecret(triplets);
 
-export {};
+export {recoverSecret};
