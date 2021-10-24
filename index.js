@@ -1,7 +1,7 @@
 /* Recover secret string */
 // Noad Bilia
 
-function recoverSecret(triplets) {
+const recoverSecret = (triplets) => {
       script = [];
       for (let i in triplets) {
             let x = triplets[i][0];
@@ -33,6 +33,12 @@ function recoverSecret(triplets) {
                   script.splice((script.indexOf(tav)-1), 0,z);
             }
       }
+      return script.join("");
+}
+
+const locationSearch = (triplets, arr,i) => {
+      // Check if there are 2 characters in the array
+      const result = triplets.filter(word => (word == arr[0] && word == arr[1]) || (word == arr[0] && word == arr[2]) || (word == arr[1] && word == arr[2]));
 }
 
 
