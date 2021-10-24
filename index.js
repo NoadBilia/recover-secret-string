@@ -45,6 +45,19 @@ const locationSearch = (triplets, arr,i) => {
             var num = rest[0].indexOf(i)
             return (rest[0][num-1])
       }
+      let location = []
+            for (let j in result) {
+                  if (arr[j] == result[0]) {
+                        location.push(arr[j], j, result[0], 0)
+                  }
+                  else if (arr[j] == result[1]) {
+                        location.push(arr[j], j, result[1], 1)
+                  }
+                  else if (arr[j] == result[2]) {
+                        location.push(arr[j], j, result[2], 2)
+                  }
+      }
+      return location[7];
 
 }
 
