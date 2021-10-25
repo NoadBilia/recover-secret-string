@@ -69,6 +69,7 @@ const locationSearch = (triplets, arr,i) => {
                         location.push(arr[j], j, result[2], 2)
                   }
       }
+      
       console.log(location[7], i)
       return location[7];
 
