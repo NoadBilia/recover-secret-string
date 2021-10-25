@@ -38,11 +38,23 @@ const recoverSecret = (triplets) => {
 
 const locationSearch = (triplets, arr,i) => {
       // Check if there are 2 characters in the array
-      const result = triplets.filter(word => (word == arr[0] && word == arr[1]) || (word == arr[0] && word == arr[2]) || (word == arr[1] && word == arr[2]));
+      let countWords = arr.map((word) => {
+            let seva = [];
+                  for (const arrOfTriplets of triplets) { // You can use `let` instead of `const` if you like
+                        for (const tav of arrOfTriplets) {
+                            console.log(word, tav)
+                            if (word === tav)
+                            seva++
+                        }
+                  }
+      });
+      console.log("countWords: ", countWords)
+      //const result; // מערך שיש בו 2 תווים  כמו 
       if (result.length == 0) { // Check if there are 1 characters in the array            
             const res = triplets.filter(word => (word[0] == i || word[1] == i || word[2] == i));
             const rest = res.filter(word => word == arr);
             var num = rest[0].indexOf(i)
+            console.log(rest[0][num-1], i)
             return (rest[0][num-1])
       }
       let location = []
@@ -57,6 +69,7 @@ const locationSearch = (triplets, arr,i) => {
                         location.push(arr[j], j, result[2], 2)
                   }
       }
+      console.log(location[7], i)
       return location[7];
 
 }
@@ -67,4 +80,4 @@ let triplets = [['t', 'u', 'p'],['w', 'h', 'i'],['t', 's', 'u'],['a', 't', 's'],
 
 recoverSecret(triplets);
 
-export {recoverSecret};
+//export {recoverSecret, locationSearch};
