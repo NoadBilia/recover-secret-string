@@ -6,7 +6,6 @@ test('Testing Recover Secret', () => {
   expect(recoverSecret(input)).toBe('whatisup');
 });
 
-
 // func - Testing Location Search
 test('Testing Location Search', () => {
   let input = ['h', 'a', 'p']
