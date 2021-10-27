@@ -9,9 +9,9 @@ const recoverSecret = (array) => {
       let twoDimensionalArray = array;
       while (emptyArray(twoDimensionalArray)) {
             for (let valueOfArrayNum of twoDimensionalArray[indexOfArray]) {
-                  if (searchTav(valueOfArrayNum, twoDimensionalArray)) {
+                  if (searchCharacter(valueOfArrayNum, twoDimensionalArray)) {
                         scriptSrt += valueOfArrayNum;
-                        twoDimensionalArray = deleteTav(valueOfArrayNum, twoDimensionalArray)
+                        twoDimensionalArray = deleteCharacter(valueOfArrayNum, twoDimensionalArray)
                         flagWeFound = true
                         break;
                   }
